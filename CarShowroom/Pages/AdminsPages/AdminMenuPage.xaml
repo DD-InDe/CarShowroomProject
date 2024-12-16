@@ -10,13 +10,13 @@
       d:DesignWidth="800">
 
     <StackPanel Orientation="Vertical">
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление пользователями" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление автомобилями" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление заявками" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Отчет и статистика" />
+        <Button x:Name="UserManageButton" Style="{StaticResource Button-Style}"
+                Content="Управление пользователями" Click="UserManageButton_OnClick"/>
+        <Button x:Name="CarManageButton" Style="{StaticResource Button-Style}"
+                Content="Управление автомобилями" Click="CarManageButton_OnClick"/>
+        <Button x:Name="RequestManageButton" Style="{StaticResource Button-Style}"
+                Content="Управление заявками" Click="RequestManageButton_OnClick"/>
+        <Button x:Name="StatsButton" Style="{StaticResource Button-Style}"
+                Content="Отчет и статистика" Click="StatsButton_OnClick"/>
     </StackPanel>
 </Page>

@@ -19,7 +19,9 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
+    public bool IsActive { get; set; }
+
     public virtual Role Role { get; set; } = null!;
 
-    public virtual Passport UserNavigation { get; set; } = null!;
+    public virtual Passport Passport { get; set; } = null!;
 }

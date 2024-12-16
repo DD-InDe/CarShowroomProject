@@ -207,6 +207,7 @@ public partial class CarShowroomDbContext : DbContext
 
             entity.Property(e => e.UserId).ValueGeneratedNever();
             entity.Property(e => e.FirstName).HasMaxLength(100);
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.LastName).HasMaxLength(100);
             entity.Property(e => e.Login).HasMaxLength(100);
             entity.Property(e => e.MiddleName).HasMaxLength(100);
@@ -217,7 +218,7 @@ public partial class CarShowroomDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__User__RoleId__5535A963");
 
-            entity.HasOne(d => d.UserNavigation).WithOne(p => p.User)
+            entity.HasOne(d => d.Passport).WithOne(p => p.User)
                 .HasForeignKey<User>(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("User___FK___Passport");

@@ -10,8 +10,6 @@
                     Value="14" />
             <Setter Property="Margin"
                     Value="5" />
-            <Setter Property="HorizontalAlignment"
-                    Value="Right" />
         </Style>
         <Style TargetType="TextBox"
                x:Key="TextBox-Style">
@@ -21,6 +19,10 @@
                     Value="200" />
             <Setter Property="Margin"
                     Value="5" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Right" />
+            <Setter Property="MaxLength"
+                    Value="100" />
         </Style>
         <Style TargetType="PasswordBox"
                x:Key="PasswordBox-Style">
@@ -30,6 +32,8 @@
                     Value="200" />
             <Setter Property="Margin"
                     Value="5" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Right" />
         </Style>
         <Style TargetType="ComboBox"
                x:Key="ComboBox-Style">
@@ -39,6 +43,8 @@
                     Value="200" />
             <Setter Property="Margin"
                     Value="5" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Right" />
         </Style>
         <Style TargetType="DatePicker"
                x:Key="DatePicker-Style">
@@ -48,6 +54,8 @@
                     Value="200" />
             <Setter Property="Margin"
                     Value="5" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Right" />
         </Style>
         <Style TargetType="Button"
                x:Key="Button-Style">

@@ -131,3 +131,7 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pa
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\AdminMenuPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\UserManagePage.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\UserManagePage.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\EditUserPage.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\EditUserPage.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\ViewCarPage.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\ViewCarPage.baml

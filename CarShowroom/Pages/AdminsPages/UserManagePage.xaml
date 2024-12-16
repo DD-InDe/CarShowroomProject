@@ -11,24 +11,51 @@
       d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <!-- todo сделать тут поиск и фильтрацию возможно -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Поиск:"
+                           Style="{StaticResource TextBlock-Style}"
+                           VerticalAlignment="Center" />
+                <TextBox x:Name="SearchTextBox"
+                         TextChanged="SearchTextBox_OnTextChanged"
+                         Style="{StaticResource TextBox-Style}"
+                         VerticalAlignment="Center" />
+                <TextBlock Text="Фильтр по роли:"
+                           VerticalAlignment="Center"
+                           Style="{StaticResource TextBlock-Style}" />
+                <ComboBox x:Name="FilterComboBox"
+                          DisplayMemberPath="Name"
+                          SelectionChanged="FilterComboBox_OnSelectionChanged"
+                          Style="{StaticResource ComboBox-Style}"
+                          VerticalAlignment="Center" />
+                <Button x:Name="AddButton"
+                        Content="Добавить"
+                        Click="AddButton_OnClick"
+                        Style="{StaticResource Button-Style}" />
+            </StackPanel>
             <DataGrid x:Name="UserDataGrid"
+                      AutoGenerateColumns="False"
                       HorizontalAlignment="Stretch"
                       IsReadOnly="True">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Active}" />
                     <DataGridTextColumn Width="*"
+                                        Binding="{Binding LastName}"
                                         Header="Фамилия" />
                     <DataGridTextColumn Width="*"
+                                        Binding="{Binding FirstName}"
                                         Header="Имя" />
                     <DataGridTextColumn Width="*"
+                                        Binding="{Binding MiddleName}"
                                         Header="Отчество" />
                     <DataGridTextColumn Width="*"
+                                        Binding="{Binding Role.Name}"
                                         Header="Роль" />
                     <DataGridTemplateColumn Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button x:Name="EditButton"
                                         Content="Изменить"
+                                        Margin="0"
                                         Style="{StaticResource Button-Style}"
                                         Click="EditButton_OnClick" />
                             </DataTemplate>
