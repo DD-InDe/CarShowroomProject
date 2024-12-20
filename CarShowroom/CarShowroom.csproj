@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="extended.wpf.toolkit" Version="4.6.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
         <PrivateAssets>all</PrivateAssets>

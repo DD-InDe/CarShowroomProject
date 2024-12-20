@@ -5,6 +5,11 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Ca
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\CarShowroom.pdb
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Wpf.AvalonDock.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Wpf.Toolkit.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Humanizer.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
@@ -48,6 +53,18 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Sy
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\System.Memory.Data.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.resources.dll
@@ -112,6 +129,7 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pa
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\EditUserPage.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\UserManagePage.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AuthPage.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\EmployeePages\EditCarPage.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\ViewCarPage.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\MainWindow.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\App.g.cs
@@ -122,6 +140,7 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pa
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\EditUserPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AdminsPages\UserManagePage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\AuthPage.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\EmployeePages\EditCarPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\ViewCarPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\MainWindow.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\CarShowroom.g.resources

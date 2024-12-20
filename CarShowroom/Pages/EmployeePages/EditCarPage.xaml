@@ -4,11 +4,67 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:CarShowroom.Pages.EmployeePages"
+      xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"
-      Title="EditCarPage"
-      Height="450"
-      Width="800">
+      Loaded="EditCarPage_OnLoaded"
+      Title="Управление автомобилем"
+      d:DesignHeight="450"
+      d:DesignWidth="800">
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="PhotoImage"
+               Source="{Binding Photo}"
+               Width="200"
+               Height="180" />
+
+        <Border Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="1">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <TextBlock Text="VIN-номер"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <TextBox x:Name="VinTextBox"
+                             Text="{Binding CarVin}"
+                             MaxLength="17"
+                             Style="{StaticResource TextBox-Style}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Цвет"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <toolkit:ColorPicker x:Name="ColorPicker"
+                                         Style="{StaticResource ColorPicker-Style}"
+                                         SelectedColor="{Binding Color}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Марка"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <ComboBox x:Name="BrandComboBox"
+                              Style="{StaticResource ComboBox-Style}"
+                              SelectedItem="{Binding Model.Brand}"
+                              DisplayMemberPath="Name" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Модель"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <ComboBox x:Name="ModelComboBox"
+                              Style="{StaticResource ComboBox-Style}"
+                              SelectedItem="{Binding Model.Brand}"
+                              DisplayMemberPath="Name" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Цена"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <TextBox x:Name="PriceComboBox"
+                             Style="{StaticResource TextBox-Style}"
+                             Text="{Binding Price}" />
+                </DockPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

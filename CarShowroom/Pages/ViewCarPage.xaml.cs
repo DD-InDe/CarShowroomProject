@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using CarShowroom.Database;
+using CarShowroom.Pages.EmployeePages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarShowroom.Pages;
@@ -14,10 +15,12 @@ public partial class ViewCarPage : Page
 
     private void SearchTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
     {
+        //todo сделать поиск
     }
 
     private void BrandComboBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        //todo сделать фильтрацию
     }
 
     private void ViewCarPage_OnLoaded(object sender, RoutedEventArgs e)
@@ -58,7 +61,8 @@ public partial class ViewCarPage : Page
         }
     }
 
-    private void AddButton_OnClick(object sender, RoutedEventArgs e)
-    {
-    }
+    private void AddButton_OnClick(object sender, RoutedEventArgs e) => NavigationService.Navigate(new EditCarPage());
+
+    private void EditButton_OnClick(object sender, RoutedEventArgs e) => NavigationService.Navigate(new EditCarPage(
+        ((Button)sender).DataContext as Car));
 }

@@ -95,6 +95,7 @@
                                             </MultiBinding>
                                         </TextBlock.Text>
                                     </TextBlock>
+                                    <Button x:Name="EditButton" Click="EditButton_OnClick"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
