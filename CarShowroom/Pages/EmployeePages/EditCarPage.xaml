@@ -13,17 +13,29 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="PhotoImage"
-               Source="{Binding Photo}"
-               Width="200"
-               Height="180" />
+        <Border Grid.Column="0"
+                BorderBrush="Black"
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="1">
+            <Image x:Name="PhotoImage"
+                   Source="{Binding Photo}"
+                   MouseLeftButtonDown="PhotoImage_OnMouseLeftButtonDown"
+                   Width="200"
+                   Height="180" />
+        </Border>
 
         <Border Grid.Column="1"
                 BorderBrush="Black"
+                Margin="10"
+                Padding="10"
+                VerticalAlignment="Center"
                 BorderThickness="1">
             <StackPanel Orientation="Vertical">
                 <DockPanel>
@@ -32,6 +44,7 @@
                     <TextBox x:Name="VinTextBox"
                              Text="{Binding CarVin}"
                              MaxLength="17"
+                             PreviewKeyDown="DisableSpace"
                              Style="{StaticResource TextBox-Style}" />
                 </DockPanel>
                 <DockPanel>
@@ -42,28 +55,41 @@
                                          SelectedColor="{Binding Color}" />
                 </DockPanel>
                 <DockPanel>
-                    <TextBlock Text="Марка"
+                    <TextBlock Text="Год производства"
                                Style="{StaticResource TextBlock-Style}" />
-                    <ComboBox x:Name="BrandComboBox"
-                              Style="{StaticResource ComboBox-Style}"
-                              SelectedItem="{Binding Model.Brand}"
-                              DisplayMemberPath="Name" />
+                    <TextBox x:Name="YearOfManufacturerTextBox"
+                             Text="{Binding YearOfManufacture}"
+                             MaxLength="4"
+                             PreviewKeyDown="DisableSpace"
+                             PreviewTextInput="NumberTextBox_OnPreviewTextInput"
+                             Style="{StaticResource TextBox-Style}" />
                 </DockPanel>
                 <DockPanel>
                     <TextBlock Text="Модель"
                                Style="{StaticResource TextBlock-Style}" />
                     <ComboBox x:Name="ModelComboBox"
                               Style="{StaticResource ComboBox-Style}"
-                              SelectedItem="{Binding Model.Brand}"
+                              SelectedItem="{Binding Model}"
                               DisplayMemberPath="Name" />
                 </DockPanel>
                 <DockPanel>
                     <TextBlock Text="Цена"
                                Style="{StaticResource TextBlock-Style}" />
                     <TextBox x:Name="PriceComboBox"
+                             PreviewKeyDown="DisableSpace"
+                             PreviewTextInput="NumberTextBox_OnPreviewTextInput"
                              Style="{StaticResource TextBox-Style}"
                              Text="{Binding Price}" />
                 </DockPanel>
+
+                <Button x:Name="SaveButton"
+                        Click="SaveButton_OnClick"
+                        Content="Сохранить"
+                        Style="{StaticResource Button-Style}" />
+                <Button x:Name="DeleteButton"
+                        Style="{StaticResource Button-Style}"
+                        Content="Удалить"
+                        Click="DeleteButton_OnClick" />
             </StackPanel>
         </Border>
     </Grid>

@@ -21,6 +21,10 @@ public partial class User
 
     public bool IsActive { get; set; }
 
+    public virtual ICollection<Request> RequestCustomers { get; set; } = new List<Request>();
+
+    public virtual ICollection<Request> RequestEmployees { get; set; } = new List<Request>();
+
     public virtual Role Role { get; set; } = null!;
 
     public virtual Passport Passport { get; set; } = null!;

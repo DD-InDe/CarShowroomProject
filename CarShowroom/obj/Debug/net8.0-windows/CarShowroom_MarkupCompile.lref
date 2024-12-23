@@ -3,9 +3,13 @@ FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\App.xaml;;
 FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\AdminsPages\AdminMenuPage.xaml;;
 FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\AdminsPages\EditUserPage.xaml;;
 FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\AdminsPages\UserManagePage.xaml;;
-FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\AuthPage.xaml;;
-FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\CarInfoPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\CustomerPages\CustomerMenuPage.xaml;;
 FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\EmployeePages\EditCarPage.xaml;;
-FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\ViewCarPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\EmployeePages\EmployeeMenuPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\GeneralPages\AuthPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\GeneralPages\CarInfoPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\GeneralPages\RequestInfoPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\GeneralPages\ViewCarPage.xaml;;
+FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Pages\GeneralPages\ViewRequestPage.xaml;;
 FC:\Users\alena\RiderProjects\CarShowroom\CarShowroom\Windows\MainWindow.xaml;;
 

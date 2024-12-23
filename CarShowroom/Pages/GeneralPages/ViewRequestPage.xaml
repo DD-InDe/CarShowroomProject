@@ -1,0 +1,69 @@
+﻿<Page x:Class="CarShowroom.Pages.ViewRequestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CarShowroom.Pages"
+      mc:Ignorable="d"
+      Title="Заявки"
+      Loaded="ViewRequestPage_OnLoaded"
+      d:DesignHeight="450"
+      d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="0">
+            <TextBlock Text="Поиск:"
+                       Style="{StaticResource TextBlock-Style}"
+                       VerticalAlignment="Center" />
+            <TextBox x:Name="SearchTextBox"
+                     TextChanged="SearchTextBox_OnTextChanged"
+                     Style="{StaticResource TextBox-Style}"
+                     VerticalAlignment="Center" />
+            <TextBlock Text="Статус:"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource TextBlock-Style}" />
+            <ComboBox x:Name="StatusComboBox"
+                      DisplayMemberPath="Name"
+                      SelectionChanged="StatusComboBox_OnSelectionChanged"
+                      Style="{StaticResource ComboBox-Style}"
+                      VerticalAlignment="Center" />
+        </StackPanel>
+
+        <DataGrid x:Name="RequestDataGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  HorizontalAlignment="Stretch"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*"
+                                    Binding="{Binding Customer.FullName}"
+                                    Header="Клиент" />
+                <DataGridTextColumn Width="*"
+                                    Binding="{Binding Employee.FullName}"
+                                    Header="Сотрудник" />
+                <DataGridTextColumn Width="*"
+                                    Binding="{Binding DateString}"
+                                    Header="Дата создания" />
+                <DataGridTextColumn Width="*"
+                                    Binding="{Binding Status.Name}"
+                                    Header="Статус" />
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="InfoButton"
+                                    Content="Подробнее"
+                                    Margin="0"
+                                    Style="{StaticResource Button-Style}"
+                                    Click="InfoButton_OnClick" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

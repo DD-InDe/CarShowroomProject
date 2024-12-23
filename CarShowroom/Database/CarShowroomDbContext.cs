@@ -21,11 +21,13 @@ public partial class CarShowroomDbContext : DbContext
 
     public virtual DbSet<Car> Cars { get; set; }
 
-    public virtual DbSet<CarPhoto> CarPhotos { get; set; }
+    public virtual DbSet<CarShowroomAddress> CarShowroomAddresses { get; set; }
 
     public virtual DbSet<CarStatus> CarStatuses { get; set; }
 
     public virtual DbSet<Class> Classes { get; set; }
+
+    public virtual DbSet<Contract> Contracts { get; set; }
 
     public virtual DbSet<EngineType> EngineTypes { get; set; }
 
@@ -34,6 +36,12 @@ public partial class CarShowroomDbContext : DbContext
     public virtual DbSet<ModelGeneration> ModelGenerations { get; set; }
 
     public virtual DbSet<Passport> Passports { get; set; }
+
+    public virtual DbSet<PaymentType> PaymentTypes { get; set; }
+
+    public virtual DbSet<Request> Requests { get; set; }
+
+    public virtual DbSet<RequestStatus> RequestStatuses { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
 
@@ -86,20 +94,13 @@ public partial class CarShowroomDbContext : DbContext
                 .HasConstraintName("FK__Car__StatusId__6C190EBB");
         });
 
-        modelBuilder.Entity<CarPhoto>(entity =>
+        modelBuilder.Entity<CarShowroomAddress>(entity =>
         {
-            entity.HasKey(e => e.CarPhotoId).HasName("PK__CarPhoto__6C84FE2811F7D871");
+            entity.HasKey(e => e.CarShowroomAddressId).HasName("PK__CarShowr__8817C6483D0A44FA");
 
-            entity.ToTable("CarPhoto");
+            entity.ToTable("CarShowroomAddress");
 
-            entity.Property(e => e.CarVin)
-                .HasMaxLength(17)
-                .HasColumnName("CarVIN");
-
-            entity.HasOne(d => d.CarVinNavigation).WithMany(p => p.CarPhotos)
-                .HasForeignKey(d => d.CarVin)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CarPhoto__CarVIN__6EF57B66");
+            entity.Property(e => e.Address).HasMaxLength(400);
         });
 
         modelBuilder.Entity<CarStatus>(entity =>
@@ -118,6 +119,26 @@ public partial class CarShowroomDbContext : DbContext
             entity.ToTable("Class");
 
             entity.Property(e => e.Name).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<Contract>(entity =>
+        {
+            entity.HasKey(e => e.ContractId).HasName("PK__Contract__C90D34699BEB930A");
+
+            entity.ToTable("Contract");
+
+            entity.Property(e => e.ContractId).ValueGeneratedNever();
+            entity.Property(e => e.DateCreate).HasColumnType("datetime");
+            entity.Property(e => e.DateOfTransaction).HasColumnType("datetime");
+
+            entity.HasOne(d => d.ContractNavigation).WithOne(p => p.Contract)
+                .HasForeignKey<Contract>(d => d.ContractId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Contract__Contra__17F790F9");
+
+            entity.HasOne(d => d.PaymentType).WithMany(p => p.Contracts)
+                .HasForeignKey(d => d.PaymentTypeId)
+                .HasConstraintName("FK__Contract__Paymen__17036CC0");
         });
 
         modelBuilder.Entity<EngineType>(entity =>
@@ -186,6 +207,50 @@ public partial class CarShowroomDbContext : DbContext
             entity.Property(e => e.IssueDate).HasColumnType("datetime");
             entity.Property(e => e.IssuedBy).HasMaxLength(200);
             entity.Property(e => e.IssuedPlace).HasMaxLength(200);
+        });
+
+        modelBuilder.Entity<PaymentType>(entity =>
+        {
+            entity.HasKey(e => e.PaymentTypeId).HasName("PK__PaymentT__BA430B35953A0472");
+
+            entity.ToTable("PaymentType");
+
+            entity.Property(e => e.Name).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<Request>(entity =>
+        {
+            entity.HasKey(e => e.RequestId).HasName("PK__Request__33A8517A7A5D7D43");
+
+            entity.ToTable("Request");
+
+            entity.Property(e => e.CarId).HasMaxLength(17);
+            entity.Property(e => e.DateCreate).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Car).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.CarId)
+                .HasConstraintName("FK__Request__CarId__0E6E26BF");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.RequestCustomers)
+                .HasForeignKey(d => d.CustomerId)
+                .HasConstraintName("FK__Request__Custome__0F624AF8");
+
+            entity.HasOne(d => d.Employee).WithMany(p => p.RequestEmployees)
+                .HasForeignKey(d => d.EmployeeId)
+                .HasConstraintName("FK__Request__Employe__10566F31");
+
+            entity.HasOne(d => d.Status).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("FK__Request__StatusI__0D7A0286");
+        });
+
+        modelBuilder.Entity<RequestStatus>(entity =>
+        {
+            entity.HasKey(e => e.RequestStatusId).HasName("PK__RequestS__7094B79B5F203AA1");
+
+            entity.ToTable("RequestStatus");
+
+            entity.Property(e => e.Name).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Role>(entity =>

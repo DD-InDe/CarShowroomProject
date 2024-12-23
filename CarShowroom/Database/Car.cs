@@ -17,9 +17,11 @@ public partial class Car
 
     public int StatusId { get; set; }
 
-    public virtual ICollection<CarPhoto> CarPhotos { get; set; } = new List<CarPhoto>();
+    public byte[]? Photo { get; set; }
 
     public virtual Model Model { get; set; } = null!;
+
+    public virtual ICollection<Request> Requests { get; set; } = new List<Request>();
 
     public virtual CarStatus Status { get; set; } = null!;
 }
