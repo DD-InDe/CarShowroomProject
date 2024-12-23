@@ -28,6 +28,6 @@
                Grid.Row="1"
                Navigated="MainFrame_OnNavigated"
                NavigationUIVisibility="Hidden"
-               Source="../Pages/AuthPage.xaml" />
+               Source="../Pages/GeneralPages/AuthPage.xaml" />
     </Grid>
 </Window>

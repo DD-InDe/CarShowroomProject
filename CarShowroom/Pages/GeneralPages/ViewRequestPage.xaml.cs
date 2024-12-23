@@ -19,7 +19,7 @@ public partial class ViewRequestPage : Page
             List<RequestStatus> statusList = new() { new() { Name = "Все" } };
             statusList.AddRange(Db.Context.RequestStatuses.ToList());
             StatusComboBox.ItemsSource = statusList;
-            
+
             LoadData();
         }
         catch (Exception exception)
@@ -42,11 +42,11 @@ public partial class ViewRequestPage : Page
 
             string search = SearchTextBox.Text.ToLower();
 
-            requests = requests.Where(c =>
-                c.Employee.FirstName.ToLower().Contains(search) ||
-                c.Employee.LastName.ToLower().Contains(search) ||
-                c.Customer.LastName.ToLower().Contains(search) ||
-                c.Customer.LastName.ToLower().Contains(search)).ToList();
+            requests = requests.Where(c => (c.Employee != null &&
+                                            c.Employee.FirstName.ToLower().Contains(search) ||
+                                            c.Employee.LastName.ToLower().Contains(search)) ||
+                                           c.Customer.LastName.ToLower().Contains(search) ||
+                                           c.Customer.LastName.ToLower().Contains(search)).ToList();
 
             if (StatusComboBox.SelectedIndex > 0)
                 requests = requests

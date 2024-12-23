@@ -65,8 +65,10 @@ public partial class CarInfoPage : Page
                 DateCreate = DateTime.Now,
                 CustomerId = App.AuthorizedUser.UserId
             };
+
             Db.Context.Requests.Add(request);
             Db.Context.SaveChanges();
+            MessageBox.Show("Заявка оставлена");
         }
         catch (Exception exception)
         {

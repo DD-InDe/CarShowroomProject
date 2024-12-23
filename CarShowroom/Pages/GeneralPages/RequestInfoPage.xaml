@@ -9,8 +9,19 @@
       Loaded="RequestInfoPage_OnLoaded"
       d:DesignHeight="450"
       d:DesignWidth="800">
-    
-      <StackPanel Orientation="Vertical">
-            
-      </StackPanel>
+
+    <StackPanel Orientation="Vertical">
+        <DockPanel>
+            <TextBlock Text="Клиент:"
+                       Style="{StaticResource TextBlock-Style}" />
+            <TextBlock Text="{Binding Customer.FullName}"
+                       Style="{StaticResource TextBlock-Style}" />
+        </DockPanel>
+        <DockPanel>
+            <TextBlock Text="Сотрудник:"
+                       Style="{StaticResource TextBlock-Style}" />
+            <TextBlock Text="{Binding Employee.FullName}"
+                       Style="{StaticResource TextBlock-Style}" />
+        </DockPanel>
+    </StackPanel>
 </Page>

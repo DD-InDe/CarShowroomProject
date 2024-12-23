@@ -16,5 +16,5 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\App.xaml
 232-452416778
 Pages\AdminsPages\AdminMenuPage.xaml;Pages\AdminsPages\EditUserPage.xaml;Pages\AdminsPages\UserManagePage.xaml;Pages\CustomerPages\CustomerMenuPage.xaml;Pages\EmployeePages\EditCarPage.xaml;Pages\EmployeePages\EmployeeMenuPage.xaml;Pages\GeneralPages\AuthPage.xaml;Pages\GeneralPages\CarInfoPage.xaml;Pages\GeneralPages\RequestInfoPage.xaml;Pages\GeneralPages\ViewCarPage.xaml;Pages\GeneralPages\ViewRequestPage.xaml;Windows\MainWindow.xaml;
 
-True
+False
 
