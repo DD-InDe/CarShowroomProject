@@ -10,15 +10,18 @@ public partial class CarInfoPage : Page
 {
     private Car _car;
 
-    public CarInfoPage(Car car)
+    public CarInfoPage(Car car, bool isViewOnly)
     {
         _car = car;
         InitializeComponent();
 
-        if (App.AuthorizedUser.RoleId is 3)
-            EditButton.Visibility = Visibility.Collapsed;
-        else
-            RequestButton.Visibility = Visibility.Collapsed;
+        if (!isViewOnly)
+        {
+            if (App.AuthorizedUser.RoleId is 3)
+                EditButton.Visibility = Visibility.Collapsed;
+            else
+                RequestButton.Visibility = Visibility.Collapsed;
+        }
     }
 
     private void CarInfoPage_OnLoaded(object sender, RoutedEventArgs e)

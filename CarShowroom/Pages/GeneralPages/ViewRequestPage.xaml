@@ -52,6 +52,21 @@
                 <DataGridTextColumn Width="*"
                                     Binding="{Binding Status.Name}"
                                     Header="Статус" />
+                <DataGridTemplateColumn Width="*"
+                                        Header="Авто">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Car.Model.Brand.Name"/>
+                                        <Binding Path="Car.Model.Name"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -6,7 +6,6 @@
       xmlns:local="clr-namespace:CarShowroom.Pages"
       mc:Ignorable="d"
       Title="Информация о заявке"
-      Loaded="RequestInfoPage_OnLoaded"
       d:DesignHeight="450"
       d:DesignWidth="800">
 
@@ -22,6 +21,32 @@
                        Style="{StaticResource TextBlock-Style}" />
             <TextBlock Text="{Binding Employee.FullName}"
                        Style="{StaticResource TextBlock-Style}" />
+        </DockPanel>
+        <DockPanel>
+            <TextBlock Text="Дата подачи заявки:"
+                       Style="{StaticResource TextBlock-Style}" />
+            <TextBlock Text="{Binding DateCreate}"
+                       Style="{StaticResource TextBlock-Style}" />
+        </DockPanel>
+        
+        <Frame Source="CarInfoPage.xaml" NavigationUIVisibility="Hidden"/>
+
+        <DockPanel>
+            <Button x:Name="CancelButton"
+                    Visibility="Collapsed"
+                    Click="CancelButton_OnClick"
+                    Style="{StaticResource Button-Style}"
+                    Content="Отменить" />
+            <Button x:Name="RejectButton"
+                    Visibility="Collapsed"
+                    Click="RejectButton_OnClick"
+                    Style="{StaticResource Button-Style}"
+                    Content="Отклонить" />
+            <Button x:Name="AcceptButton"
+                    Visibility="Collapsed"
+                    Click="AcceptButton_OnClick"
+                    Style="{StaticResource Button-Style}"
+                    Content="Одобрить" />
         </DockPanel>
     </StackPanel>
 </Page>

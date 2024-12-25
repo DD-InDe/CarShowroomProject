@@ -69,5 +69,5 @@ public partial class ViewCarPage : Page
         NavigationService.Navigate(new EditCarPage());
 
     private void InfoButton_OnClick(object sender, RoutedEventArgs e) =>
-        NavigationService.Navigate(new CarInfoPage(((Button)sender).DataContext as Car));
+        NavigationService.Navigate(new CarInfoPage(((Button)sender).DataContext as Car,false));
 }

@@ -36,6 +36,8 @@ public partial class ViewRequestPage : Page
             List<Request> requests = Db.Context.Requests
                 .Include(c => c.Status)
                 .Include(c => c.Car)
+                .Include(c => c.Car.Model)
+                .Include(c => c.Car.Model.Brand)
                 .Include(c => c.Customer)
                 .Include(c => c.Employee)
                 .ToList();
@@ -43,8 +45,8 @@ public partial class ViewRequestPage : Page
             string search = SearchTextBox.Text.ToLower();
 
             requests = requests.Where(c => (c.Employee != null &&
-                                            c.Employee.FirstName.ToLower().Contains(search) ||
-                                            c.Employee.LastName.ToLower().Contains(search)) ||
+                                            (c.Employee.FirstName.ToLower().Contains(search) ||
+                                             c.Employee.LastName.ToLower().Contains(search))) ||
                                            c.Customer.LastName.ToLower().Contains(search) ||
                                            c.Customer.LastName.ToLower().Contains(search)).ToList();
 
