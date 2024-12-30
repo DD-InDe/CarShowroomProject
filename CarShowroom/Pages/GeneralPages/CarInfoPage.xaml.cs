@@ -18,9 +18,9 @@ public partial class CarInfoPage : Page
         if (!isViewOnly)
         {
             if (App.AuthorizedUser.RoleId is 3)
-                EditButton.Visibility = Visibility.Collapsed;
+                RequestButton.Visibility = Visibility.Visible;
             else
-                RequestButton.Visibility = Visibility.Collapsed;
+                EditButton.Visibility = Visibility.Visible;
         }
     }
 

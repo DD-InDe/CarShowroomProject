@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using CarShowroom.Pages.AdminsPages;
+using CarShowroom.Pages.EmployeePages;
 
 namespace CarShowroom.Pages;
 
@@ -20,5 +21,6 @@ public partial class AdminMenuPage : Page
     private void RequestManageButton_OnClick(object sender, RoutedEventArgs e) =>
         NavigationService.Navigate(new ViewRequestPage());
 
-    private void StatsButton_OnClick(object sender, RoutedEventArgs e) => throw new NotImplementedException();
+    private void StatsButton_OnClick(object sender, RoutedEventArgs e) =>
+        NavigationService.Navigate(new ViewStatsPage());
 }

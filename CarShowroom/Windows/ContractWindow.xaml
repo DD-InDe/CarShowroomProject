@@ -1,0 +1,58 @@
+﻿<Window x:Class="CarShowroom.Windows.ContractWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:CarShowroom.Windows"
+        mc:Ignorable="d"
+        Title="Окно контракта"
+        Height="350"
+        Width="600">
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    x:Name="NewContractPanel"
+                    Visibility="Collapsed">
+            <TextBlock FontSize="16"
+                       HorizontalAlignment="Center"
+                       Text="Добавление нового договора"
+                       Style="{StaticResource TextBlock-Style}" />
+            <DockPanel>
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="Тип оплаты:" />
+                <ComboBox x:Name="PaymentTypeComboBox"
+                          SelectedItem="{Binding PaymentType}"
+                          Style="{StaticResource ComboBox-Style}"
+                          DisplayMemberPath="Name" />
+            </DockPanel>
+
+            <Button x:Name="CancelButton"
+                    Click="CancelButton_OnClick"
+                    Style="{StaticResource Button-Style}"
+                    Content="Отмена" />
+            <Button x:Name="AddButton"
+                    Style="{StaticResource Button-Style}"
+                    Click="AddButton_OnClick"
+                    Content="Сохранить" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    x:Name="ViewContractPanel"
+                    Visibility="Collapsed">
+            <TextBlock FontSize="16"
+                       HorizontalAlignment="Center"
+                       Text="Договор"
+                       Style="{StaticResource TextBlock-Style}" />
+            <DockPanel>
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="Дата составления:" />
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="{Binding DateString}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="Тип оплаты:" />
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="{Binding PaymentType.Name}" />
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -16,5 +16,6 @@ public partial class EmployeeMenuPage : Page
     private void RequestManageButton_OnClick(object sender, RoutedEventArgs e) =>
         NavigationService.Navigate(new ViewRequestPage());
 
-    private void StatsButton_OnClick(object sender, RoutedEventArgs e) => throw new NotImplementedException();
+    private void StatsButton_OnClick(object sender, RoutedEventArgs e) =>
+        NavigationService.Navigate(new ViewStatsPage());
 }

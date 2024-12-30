@@ -164,3 +164,9 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pa
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\GeneralPages\RequestInfoPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\GeneralPages\ViewCarPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\GeneralPages\ViewRequestPage.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\ContractWindow.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\ContractWindow.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\EmployeePages\ViewStatsPage.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\EmployeePages\ViewStatsPage.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\LiveCharts.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll

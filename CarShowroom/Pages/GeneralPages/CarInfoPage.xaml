@@ -69,10 +69,12 @@
                 <Button x:Name="RequestButton"
                         Content="Оставить заявку"
                         Click="RequestButton_OnClick"
+                        Visibility="Collapsed"
                         Style="{StaticResource Button-Style}" />
                 <Button x:Name="EditButton"
                         Content="Редактировать информацию"
                         Click="EditButton_OnClick"
+                        Visibility="Collapsed"
                         Style="{StaticResource Button-Style}" />
             </StackPanel>
         </Border>
