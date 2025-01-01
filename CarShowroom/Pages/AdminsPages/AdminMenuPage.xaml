@@ -5,18 +5,30 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:CarShowroom.Pages"
       mc:Ignorable="d"
-      Title="Меню адмнистратора"
+      Title="Меню администратора"
       d:DesignHeight="450"
       d:DesignWidth="800">
 
     <StackPanel Orientation="Vertical">
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление пользователями" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление автомобилями" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Управление заявками" />
-        <Button Style="{StaticResource Button-Style}"
-                Content="Отчет и статистика" />
+        <Button x:Name="UserManageButton"
+                Style="{StaticResource Button-Style}"
+                Content="Управление пользователями"
+                Click="UserManageButton_OnClick" />
+        <Button x:Name="CarManageButton"
+                Style="{StaticResource Button-Style}"
+                Content="Управление автомобилями"
+                Click="CarManageButton_OnClick" />
+        <Button x:Name="RequestManageButton"
+                Style="{StaticResource Button-Style}"
+                Content="Управление заявками"
+                Click="RequestManageButton_OnClick" />
+        <Button x:Name="StatsButton"
+                Style="{StaticResource Button-Style}"
+                Content="Статистика"
+                Click="StatsButton_OnClick" />
+        <Button x:Name="ReportButton"
+                Style="{StaticResource Button-Style}"
+                Content="Отчетность"
+                Click="ReportButton_OnClick" />
     </StackPanel>
 </Page>

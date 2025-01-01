@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,8 +22,24 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    /// <summary>
+    /// Обработка события нажатия кнопки "Назад"
+    /// Просто переходим назад по открытым страницам.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void BackButton_OnClick(object sender, RoutedEventArgs e) => MainFrame.GoBack();
 
-    private void MainFrame_OnNavigated(object sender, NavigationEventArgs e) => BackButton.Visibility =
-        MainFrame.CanGoBack ? Visibility.Visible : Visibility.Collapsed;
+    /// <summary>
+    /// Обработка события загрузки новой страницы.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)
+    {
+        // BackButton.Visibility = 
+        //     можно вернуться назад ? (да) Visibility.Visible : (иначе) Visibility.Collapsed;
+        BackButton.Visibility =
+            MainFrame.CanGoBack ? Visibility.Visible : Visibility.Collapsed;
+    }
 }

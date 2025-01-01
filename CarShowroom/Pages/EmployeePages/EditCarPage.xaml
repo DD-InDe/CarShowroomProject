@@ -1,0 +1,96 @@
+﻿<Page x:Class="CarShowroom.Pages.EmployeePages.EditCarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CarShowroom.Pages.EmployeePages"
+      xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d"
+      Loaded="EditCarPage_OnLoaded"
+      Title="Управление автомобилем"
+      d:DesignHeight="450"
+      d:DesignWidth="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                BorderBrush="Black"
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderThickness="1">
+            <Image x:Name="PhotoImage"
+                   Source="{Binding Photo}"
+                   MouseLeftButtonDown="PhotoImage_OnMouseLeftButtonDown"
+                   Width="200"
+                   Height="180" />
+        </Border>
+
+        <Border Grid.Column="1"
+                BorderBrush="Black"
+                Margin="10"
+                Padding="10"
+                VerticalAlignment="Center"
+                BorderThickness="1">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <TextBlock Text="VIN-номер"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <TextBox x:Name="VinTextBox"
+                             Text="{Binding CarVin}"
+                             MaxLength="17"
+                             PreviewKeyDown="DisableSpace"
+                             Style="{StaticResource TextBox-Style}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Цвет"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <toolkit:ColorPicker x:Name="ColorPicker"
+                                         Style="{StaticResource ColorPicker-Style}"
+                                         SelectedColor="{Binding Color}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Год производства"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <TextBox x:Name="YearOfManufacturerTextBox"
+                             Text="{Binding YearOfManufacture}"
+                             MaxLength="4"
+                             PreviewKeyDown="DisableSpace"
+                             PreviewTextInput="NumberTextBox_OnPreviewTextInput"
+                             Style="{StaticResource TextBox-Style}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Модель"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <ComboBox x:Name="ModelComboBox"
+                              Style="{StaticResource ComboBox-Style}"
+                              SelectedItem="{Binding Model}"
+                              DisplayMemberPath="Name" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Цена"
+                               Style="{StaticResource TextBlock-Style}" />
+                    <TextBox x:Name="PriceComboBox"
+                             PreviewKeyDown="DisableSpace"
+                             PreviewTextInput="NumberTextBox_OnPreviewTextInput"
+                             Style="{StaticResource TextBox-Style}"
+                             Text="{Binding Price}" />
+                </DockPanel>
+
+                <Button x:Name="SaveButton"
+                        Click="SaveButton_OnClick"
+                        Content="Сохранить"
+                        Style="{StaticResource Button-Style}" />
+                <Button x:Name="DeleteButton"
+                        Style="{StaticResource Button-Style}"
+                        Content="Удалить"
+                        Click="DeleteButton_OnClick" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

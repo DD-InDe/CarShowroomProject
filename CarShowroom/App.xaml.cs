@@ -10,5 +10,5 @@ namespace CarShowroom;
 /// </summary>
 public partial class App : Application
 {
-    public static SessionUser? User;
+    public static User? AuthorizedUser; // авторизированный пользователь хранится здесь
 }

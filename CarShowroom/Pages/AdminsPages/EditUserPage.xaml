@@ -1,0 +1,157 @@
+﻿<Page x:Class="CarShowroom.Pages.AdminsPages.EditUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CarShowroom.Pages.AdminsPages"
+      mc:Ignorable="d"
+      Title="Управление пользователем"
+      Loaded="EditUserPage_OnLoaded"
+      d:DesignHeight="450"
+      d:DesignWidth="800">
+    <StackPanel Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black"
+                    Padding="10"
+                    Margin="15,5"
+                    BorderThickness="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Персональные данные"
+                               Style="{StaticResource TextBlock-Style}"
+                               HorizontalAlignment="Center"
+                               Margin="10"
+                               FontSize="16"
+                               FontWeight="Medium" />
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   HorizontalAlignment="Left"
+                                   Text="Фамилия:" />
+                        <TextBox x:Name="LastNameTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 PreviewKeyDown="DisableSpace"
+                                 Text="{Binding LastName}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Имя:" />
+                        <TextBox x:Name="FirstNameTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 PreviewKeyDown="DisableSpace"
+                                 Text="{Binding FirstName}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Отчество:" />
+                        <TextBox x:Name="MiddleNameTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 PreviewKeyDown="DisableSpace"
+                                 Text="{Binding MiddleName}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Логин:" />
+                        <TextBox x:Name="LoginTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 PreviewKeyDown="DisableSpace"
+                                 Text="{Binding Login}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Пароль:" />
+                        <TextBox x:Name="PasswordTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 PreviewKeyDown="DisableSpace"
+                                 Text="{Binding Password}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Роль:" />
+                        <ComboBox x:Name="RoleComboBox"
+                                  DisplayMemberPath="Name"
+                                  SelectedItem="{Binding Role}"
+                                  Style="{StaticResource ComboBox-Style}" />
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="Black"
+                    Grid.Column="1"
+                    Padding="10"
+                    Margin="15,5"
+                    BorderThickness="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Паспортные данные"
+                               Style="{StaticResource TextBlock-Style}"
+                               HorizontalAlignment="Center"
+                               Margin="10"
+                               FontSize="16"
+                               FontWeight="Medium" />
+
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Серия:" />
+                        <TextBox x:Name="SerialTextBox"
+                                 PreviewKeyDown="DisableSpace"
+                                 PreviewTextInput="NumberTextBox_OnPreviewTextInput"
+                                 Style="{StaticResource TextBox-Style}"
+                                 Text="{Binding Passport.Serial}"
+                                 MaxLength="4" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Номер:" />
+                        <TextBox x:Name="NumberTextBox"
+                                 MaxLength="6"
+                                 PreviewKeyDown="DisableSpace"
+                                 PreviewTextInput="NumberTextBox_OnPreviewTextInput"
+                                 Style="{StaticResource TextBox-Style}"
+                                 Text="{Binding Passport.Number}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Дата рождения:" />
+                        <DatePicker x:Name="BirthDatePicker"
+                                    Style="{StaticResource DatePicker-Style}"
+                                    SelectedDate="{Binding Passport.BirthDate}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Дата выдачи:" />
+                        <DatePicker x:Name="IssueDatePicker"
+                                    Style="{StaticResource DatePicker-Style}"
+                                    SelectedDate="{Binding Passport.IssueDate}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Кем выдан:" />
+                        <TextBox x:Name="IssueByTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 MaxLength="200"
+                                 Text="{Binding Passport.IssuedBy}" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Style="{StaticResource TextBlock-Style}"
+                                   Text="Где выдан:" />
+                        <TextBox x:Name="IssuedPlaceTextBox"
+                                 Style="{StaticResource TextBox-Style}"
+                                 MaxLength="200"
+                                 Text="{Binding Passport.IssuedPlace}" />
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Button x:Name="ChangeStatusButton"
+                Click="ChangeStatusButton_OnClick"
+                Style="{StaticResource Button-Style}"
+                HorizontalAlignment="Center" />
+        <Button x:Name="SaveButton"
+                Content="Сохранить"
+                Click="SaveButton_OnClick"
+                Style="{StaticResource Button-Style}"
+                HorizontalAlignment="Center" />
+    </StackPanel>
+</Page>
