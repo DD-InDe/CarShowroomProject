@@ -24,6 +24,13 @@
                           Style="{StaticResource ComboBox-Style}"
                           DisplayMemberPath="Name" />
             </DockPanel>
+            <DockPanel>
+                <TextBlock Style="{StaticResource TextBlock-Style}"
+                           Text="Дата сделки:" />
+                <DatePicker x:Name="TransactionDatePicker"
+                            SelectedDate="{Binding DateOfTransaction}"
+                            Style="{StaticResource DatePicker-Style}" />
+            </DockPanel>
 
             <Button x:Name="CancelButton"
                     Click="CancelButton_OnClick"

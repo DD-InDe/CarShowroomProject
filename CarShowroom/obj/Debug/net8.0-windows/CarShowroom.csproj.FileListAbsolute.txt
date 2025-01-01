@@ -170,3 +170,7 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pa
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Pages\EmployeePages\ViewStatsPage.baml
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\LiveCharts.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Document.NET.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Words.NET.dll
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\PrintReportWindow.g.cs
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\PrintReportWindow.baml

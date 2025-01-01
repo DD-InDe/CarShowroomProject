@@ -15,6 +15,8 @@
         <Button x:Name="RequestManageButton" Style="{StaticResource Button-Style}"
                 Content="Управление заявками" Click="RequestManageButton_OnClick"/>
         <Button x:Name="StatsButton" Style="{StaticResource Button-Style}"
-                Content="Отчет и статистика" Click="StatsButton_OnClick"/>
+                Content="Статистика" Click="StatsButton_OnClick"/>
+        <Button x:Name="ReportButton" Style="{StaticResource Button-Style}"
+                Content="Отчетность" Click="ReportButton_OnClick"/>
     </StackPanel>
 </Page>

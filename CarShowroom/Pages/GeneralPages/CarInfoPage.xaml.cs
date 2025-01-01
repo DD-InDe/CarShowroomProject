@@ -10,11 +10,18 @@ public partial class CarInfoPage : Page
 {
     private Car _car;
 
+    /// <summary>
+    ///  Конструктор страницы
+    /// </summary>
+    /// <param name="car">наш автомобиль</param>
+    /// <param name="isViewOnly">переменная указывающая только просмотр или возможно редактирование</param>
     public CarInfoPage(Car car, bool isViewOnly)
     {
+        // 
         _car = car;
         InitializeComponent();
 
+        // если не только просмотр, то разрешаем добавлять авто в заявку и редактировать его
         if (!isViewOnly)
         {
             if (App.AuthorizedUser.RoleId is 3)
@@ -24,16 +31,26 @@ public partial class CarInfoPage : Page
         }
     }
 
+    /// <summary>
+    /// Метод для обработки события загрузки страницы
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void CarInfoPage_OnLoaded(object sender, RoutedEventArgs e)
     {
         try
         {
+            /*
+             * ищем авто в базе, если не находим, то возвращаемся назад (на просмотр всех авто)
+             * (это нам нужно для страницы EditCarPage, после удаление авто мы переходим назад на эту страницу, а авто уже не существует)
+             */
             if (Db.Context.Cars.Find(_car.CarVin) == null)
             {
                 NavigationService.GoBack();
                 return;
             }
 
+            // находим всю инфу по авто из базы и загружаем на страницу
             _car = Db.Context.Cars
                 .Include(c => c.Model)
                 .Include(c => c.Model.Brand)
@@ -51,6 +68,11 @@ public partial class CarInfoPage : Page
         }
     }
 
+    /// <summary>
+    /// Обработка события нажатия на кнопку "Оставить заявку"
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void RequestButton_OnClick(object sender, RoutedEventArgs e)
     {
         try
@@ -61,6 +83,7 @@ public partial class CarInfoPage : Page
                 return;
             }
 
+            // создаем новую заявку
             Request request = new()
             {
                 Car = _car,
@@ -69,6 +92,7 @@ public partial class CarInfoPage : Page
                 CustomerId = App.AuthorizedUser.UserId
             };
 
+            // добавляем заявку в базу
             Db.Context.Requests.Add(request);
             Db.Context.SaveChanges();
             MessageBox.Show("Заявка оставлена");
@@ -80,6 +104,11 @@ public partial class CarInfoPage : Page
         }
     }
 
+    /// <summary>
+    /// Обработка события нажатия на кнопку "Редактировать"
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void EditButton_OnClick(object sender, RoutedEventArgs e) =>
         NavigationService.Navigate(new EditCarPage(_car));
 }
