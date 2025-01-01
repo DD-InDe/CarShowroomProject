@@ -174,3 +174,4 @@ C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xc
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\bin\Debug\net8.0-windows\Xceed.Words.NET.dll
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\PrintReportWindow.g.cs
 C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\Windows\PrintReportWindow.baml
+C:\Users\alena\RiderProjects\CarShowroom\CarShowroom\obj\Debug\net8.0-windows\CarShowroom.sourcelink.json

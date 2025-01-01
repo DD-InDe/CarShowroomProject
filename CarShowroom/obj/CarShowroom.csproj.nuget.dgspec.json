@@ -13,7 +13,6 @@
         "packagesPath": "C:\\Users\\alena\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\alena\\RiderProjects\\CarShowroom\\CarShowroom\\obj\\",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\alena\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],

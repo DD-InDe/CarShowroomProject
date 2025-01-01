@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="aa3b19d3-41d3-47b3-a788-cba5d74cec92" name="CarShowroomDb@LEGION (DDL) Mapping">
+      <data-sources db="99b1a270-7f89-47f5-9457-4a48299fb530" ddl="5163c8ce-0ca1-4dca-8ff5-a79101029114" />
+      <scope>
+        <node kind="database" qname="CarShowroomDb" />
+      </scope>
+    </mapping>
+  </component>
+</project>
